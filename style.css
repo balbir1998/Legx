@@ -4,4 +4,209 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white-text: #fff;
+}
+
+.header {
+    background-image: url("./assets/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white-text);
+    padding-block: 225px;
+    border-radius: 0px 0px 150px 150px;
+}
+
+
+/* ------------------------ nav section ------------------------------------ */
+.nav-container {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 80px;
+    transition: 0.5s;
+}
+
+.nav-content {
+    padding-inline: 12px;
+    max-width: 1296px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.menus-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    height: 40px;
+}
+
+.menus-container li {
+    padding-inline: 10px;
+}
+
+.menus-container li a {
+    color: inherit;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: all 0.4s ease 0s;
+}
+
+
+
+.menus-container li:nth-child(1)>a,
+.menus-container li>a:hover {
+    background-color: #4390ed;
+}
+
+.btn,
+.menus-container li>.btn:hover {
+    background-color: #ee626b;
+}
+
+.scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    background-color: #0071f8;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px;
+    z-index: 999;
+    height: 80px;
+}
+
+
+/* ------------------------ banner secion ------------------------------------ */
+
+.banner-content {
+    max-width: 1296px;
+    padding-inline: 12px;
+    margin-inline: auto;
+    display: flex;
+}
+
+.banner-text-container,
+.banner-img-container {
+    width: 100%;
+}
+
+.banner-text-container {
+    align-self: center;
+}
+
+.banner-text-container p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.banner-text-container h1 {
+    font-size: 48px;
+    margin: 20px 0 40px;
+    position: relative;
+}
+
+.banner-text-container h1::after {
+    content: '';
+    background-image: url("./assets/caption-dec.png");
+    width: 202px;
+    height: 12px;
+    position: absolute;
+    left: 125px;
+    bottom: 0;
+}
+
+.banner-text-container p:nth-child(3) {
+    font-size: 14px;
+    margin-bottom: 70px;
+}
+
+.form {
+    max-width: 450px;
+    background-color: #fff;
+    display: flex;
+    padding-inline: 25px;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.input {
+    flex-grow: 1;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.form-btn {
+    border-radius: inherit;
+    border: none;
+    background-color: #EE626B;
+    padding-inline: 25px;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    cursor: pointer;
+}
+
+.banner-img-container {
+    display: flex;
+    align-items: center;
+}
+
+.img-parent {
+    margin-left: auto;
+    position: relative;
+}
+
+.banner-img-container .banner-img {
+    border-radius: 25px;
+    max-width: 415px;
+    width: 100%;
+}
+
+.price,
+.offer {
+    display: inline-block;
+    font-weight: 700;
+    position: absolute;
+}
+
+.price {
+    font-size: 22px;
+    background-color: #008AF8;
+    padding: 4px 15px;
+    border-radius: 25px;
+    right: 20px;
+    top: 20px;
+}
+
+.offer {
+    background-color: #EE626B;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    left: -25px;
+    bottom: -25px;
 }
