@@ -39,12 +39,15 @@
     height: 100%;
 }
 
+.menus-section {
+    flex-grow: 1;
+}
+
 
 .menus-container {
     display: flex;
-    flex-grow: 1;
+    min-height: 40px;
     justify-content: end;
-    height: 40px;
 }
 
 .menus-container li {
@@ -63,15 +66,14 @@
     transition: all 0.4s ease 0s;
 }
 
-
-
 .menus-container li:nth-child(1)>a,
 .menus-container li>a:hover {
-    background-color: #4390ed;
+    background-color: rgba(255, 255, 255, 0.10);
 }
 
 .btn,
 .menus-container li>.btn:hover {
+    text-transform: uppercase;
     background-color: #ee626b;
 }
 
@@ -84,6 +86,172 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px;
     z-index: 999;
     height: 80px;
+}
+
+
+.menu-trigger {
+    cursor: pointer;
+    height: 40px;
+    display: none;
+    align-items: center;
+    margin-left: auto;
+}
+
+.hamburger-icon {
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    display: none;
+    margin-left: auto;
+}
+
+.hamburger-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: 1px;
+    width: 75%;
+    background-color: #fff;
+    display: block;
+    transition: all 0.4s;
+}
+
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 1px;
+    width: 75%;
+    background-color: #fff;
+    display: block;
+    transition: all 0.4s;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked+.menu-trigger>.hamburger-icon {
+    background-color: transparent;
+}
+
+.checkbox:checked+.menu-trigger>.hamburger-icon::before,
+.checkbox:checked+.menu-trigger>.hamburger-icon::after {
+    height: 2px;
+    width: 100%;
+}
+
+.checkbox:checked+.menu-trigger>.hamburger-icon::before {
+    transform: translateY(-5px) translateX(5px) rotate(45deg);
+    transform-origin: -12% 100%;
+    width: 33px;
+}
+
+.checkbox:checked+.menu-trigger>.hamburger-icon::after {
+    transform: translateY(-6px) translateX(1px) rotate(-45deg);
+    transform-origin: 33% 0;
+}
+
+@media (max-width: 1400px) {
+    .nav-content {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-content {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-content {
+        max-width: 720px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .menus-container li {
+        padding-inline: 5px;
+    }
+
+    .menus-container li>a {
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 764px) {
+    .menu-trigger {
+        display: flex;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .nav-container {
+        top: 20px;
+    }
+
+    .scroll {
+        top: 0px;
+    }
+
+    .hamburger-icon .nav-content {
+        position: relative;
+    }
+
+    .menus-section {
+        padding-inline: 12px;
+        position: absolute;
+        z-index: 999;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 564px;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease 0s;
+    }
+
+    .menus-container {
+        background-color: #fff;
+        color: black;
+        flex-direction: column;
+        margin-left: unset;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    .menus-container li {
+        padding-inline: unset;
+        border-top: 1px solid #eee;
+    }
+
+    .menus-container li a {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .menus-container .btn,
+    .menus-container .btn:hover {
+        background-color: unset !important;
+    }
+
+    .checkbox:checked~.menus-section {
+        max-height: 500px;
+    }
+
+    body:has(.checkbox:checked) {
+        pointer-events: fixed;
+        overflow: hidden;
+    }
+
 }
 
 
@@ -209,4 +377,71 @@
     font-size: 28px;
     left: -25px;
     bottom: -25px;
+}
+
+@media (max-width: 1400px) {
+    .banner-content {
+        max-width: 1140px;
+    }
+
+    .banner-img-container .banner-img {
+        max-width: 356px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-content {
+        max-width: 960px;
+    }
+
+    .banner-img-container .banner-img {
+        max-width: 296px;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-content {
+        max-width: 720px;
+        flex-direction: column;
+    }
+
+    .banner-text-container {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .form {
+        max-width: unset;
+        width: 100%;
+    }
+
+    .img-parent {
+        margin-left: unset;
+        width: 100%;
+    }
+
+    .banner-img-container .banner-img {
+        max-width: unset;
+    }
+}
+
+@media (max-width: 764px) {
+    .header {
+        padding-block: 180px;
+    }
+
+    .banner-content {
+        max-width: 540px;
+    }
+
+    .offer {
+        left: 10px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .banner-text-container h1::after {
+        left: 30px;
+    }
 }
