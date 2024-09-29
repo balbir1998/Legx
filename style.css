@@ -583,6 +583,10 @@
     border-radius: 25px;
 }
 
+.btn-right-container a:hover {
+    background-color: #0071f8;
+}
+
 .trending-cards-section {
     display: flex;
     flex-wrap: wrap;
@@ -703,6 +707,130 @@
     }
 
     .trending-card-container {
+        width: 100%;
+    }
+}
+
+/* ----------------- games section ---------------------- */
+
+.games-container {
+    margin-top: 120px;
+    padding-block: 100px;
+    background-color: #f7f7f7;
+    border-radius: 150px;
+}
+
+.games-content {
+    max-width: 1296px;
+    margin-inline: auto;
+}
+
+.games-cards-container {
+    display: flex;
+}
+
+.games-card-parent {
+    padding-inline: 12px;
+    cursor: pointer;
+}
+
+
+.game-card {
+    background-color: #fff;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.game-card-img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+.games-card-text {
+    padding: 20px 15px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.games-card-text span {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.games-card-text h4 {
+    font-size: 17px;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.games-card-text a {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 15px;
+    background-color: #ee626b;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    transition: all .3s;
+}
+
+.games-card-parent:hover h4 {
+    color: #0071f8;
+}
+
+.games-card-parent:hover a {
+    background-color: #0071f8;
+}
+
+@media (max-width: 1400px) {
+    .games-content {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .games-content {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .games-content {
+        max-width: 720px;
+    }
+
+    .games-cards-container {
+        flex-wrap: wrap;
+    }
+
+    .games-card-parent {
+        width: 50%;
+    }
+}
+
+@media (max-width: 764px) {
+    .games-content {
+        max-width: 540px;
+    }
+
+    .game-top-text .text-info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .games-card-parent {
         width: 100%;
     }
 }
