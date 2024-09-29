@@ -1127,3 +1127,31 @@
         text-align: center;
     }
 }
+
+/* ----------------- footer section ---------------------------- */
+
+.footer-container {
+    margin-top: 150px;
+    background-color: #0071f8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./assets/footer-bg.jpg");
+    min-height: 150px;
+    border-radius: 150px 150px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    max-width: 1296px;
+    margin-inline: auto;
+    padding-inline: 12px;
+}
+
+.footer-content p {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
